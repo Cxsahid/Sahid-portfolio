@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mohammed Sahid Asrafi | Software Developer</title>
+    <meta name="description" content="Portfolio of Mohammed Sahid Asrafi, CSE 3rd Year Student & Software Developer specializing in Web Dev and Data Analytics.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;600&family=Inter:wght@300;400;600;800&family=Poppins:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div id="custom-cursor"></div>
+    <div id="cursor-glow"></div>
+    <div id="scroll-progress"></div>
+
+    <div id="loading-screen">
+        <div class="terminal-loader">
+            <div class="terminal-header">
+                <span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span>
+            </div>
+            <div class="terminal-body" id="terminal-body">
+                <p>Initializing hybrid matrix...</p>
+                <p>Loading dependencies [#################] 100%</p>
+                <p>Compiling assets...</p>
+                <p class="success">System Ready.</p>
+                <p class="blinking-cursor">_</p>
+            </div>
+        </div>
+    </div>
+
+    <canvas id="particle-canvas"></canvas>
+
+    <nav id="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <a href="#home"><span class="bracket">&lt;</span>Sahid<span class="bracket">/&gt;</span></a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#skills">Arsenal</a></li>
+                <li><a href="#stats">Metrics</a></li>
+                <li><a href="#certifications">Certifications</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="hamburger"><i class="fas fa-bars"></i></div>
+        </div>
+    </nav>
+
+    <!-- Magazine Hero Section -->
+    <header id="home" class="magazine-hero">
+        <div class="grid-center profile-wrapper parallax" data-speed="-0.02">
+            <div class="profile-glow"></div>
+            
+            <div class="profile-hologram-container">
+                <div class="cyber-box box-1"></div>
+                <div class="cyber-box box-2"></div>
+                
+
+                <!-- Profile Image with Orbiting Skills -->
+                <div class="profile-display" style="position: relative; display: flex; justify-content: center; align-items: flex-end; width: 100%; height: 360px; transform-style: preserve-3d; z-index: 5;">
+                    <!-- The old square card background -->
+                    <div class="profile-square-bg" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border-radius: 12px; border: 4px solid var(--accent-primary); background: radial-gradient(circle at top right, var(--bg-card), var(--bg-main)); box-shadow: 0 20px 50px rgba(0, 0, 0, 0.8), 0 0 30px rgba(255, 215, 0, 0.3);"></div>
+                    <!-- True 3D Orbiting Skills -->
+                    <div class="orbit-container-3d">
+                        <i class="fab fa-react orbit-item"></i>
+                        <i class="fab fa-js-square orbit-item"></i>
+                        <i class="fab fa-python orbit-item"></i>
+                        <i class="fab fa-html5 orbit-item"></i>
+                        <i class="fab fa-css3-alt orbit-item"></i>
+                        <i class="fas fa-database orbit-item"></i>
+                    </div>
+                    <img src="images/profile_transparent.png" alt="Mohammed Sahid Asrafi" class="magazine-profile-img">
+                </div>
+
+            </div>
+        </div>
+        <div class="grid-headline parallax" data-speed="0.05">
+            <p class="magazine-topline"><i class="fas fa-terminal"></i> root@sahid:~# whoami</p>
+            <h1 class="magazine-name">SAHID</h1>
+            <h2 class="magazine-title"><span class="highlight typewriter"></span><span class="cursor">|</span></h2>
+            <div class="magazine-bio-box bento-card card-hover">
+                <p><span class="highlight">while (alive) { code(); }</span></p>
+                <p>Turning caffeine into scalable architecture and responsive web applications.</p>
+                <p>Data is the new oil, and I build the refineries using Python and C++.</p>
+                <p class="mt-1"><i class="fas fa-laptop-code"></i> <em>Hackathons temporarily on hold. Compiling the next big idea.</em></p>
+                <div class="hero-socials mt-2">
+                    <a href="https://github.com/cx-sahid" target="_blank" class="social-btn"><i class="fab fa-github"></i></a>
+                    <a href="https://www.linkedin.com/in/mohammed-sahid-asrafi-11a9392a3" target="_blank" class="social-btn"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="https://www.instagram.com/mustbesahid_?igsh=bjhwd2NidnIzaGdq" target="_blank" class="social-btn"><i class="fab fa-instagram"></i></a>
+                    <a href="mailto:mohammedsahidasrafi@gmail.com" class="social-btn"><i class="fas fa-envelope"></i></a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Extended Scrolling Layout -->
+    <main class="extended-layout">
+        
+        <!-- Arsenal & Strengths (Realistic Layout) -->
+        <section id="skills" class="section dark-section reveal-element">
+            <div class="container">
+                <h2 class="section-title"><span class="highlight">Technical Strengths</span></h2>
+                <div class="strengths-grid" id="strengthsGrid">
+                    <div class="strength-card bento-card card-hover">
+                        <div class="card-icon"><i class="fab fa-js-square"></i></div>
+                        <h3>Frontend Architecture</h3>
+                        <p>Specializing in ES6+, React.js, and vanilla HTML/CSS to build high-performance, dynamic, and responsive web applications.</p>
+                        <div class="project-details" data-github-repo="Cxsahid/SQuizz">
+                            <i class="fas fa-times close-btn"></i>
+                            <div class="project-content-split">
+                                <div class="project-text-side">
+                                    <h4 class="repo-name">Featured Project: Loading...</h4>
+                                    <p class="repo-desc">Fetching live data from GitHub...</p>
+                                    <div class="project-links mt-2">
+                                        <a href="https://cxsahid.github.io/SQuizz/" target="_blank" class="btn primary-btn"><i class="fas fa-globe"></i> Live Demo</a>
+                                        <a href="#" target="_blank" class="btn outline-btn repo-link"><i class="fab fa-github"></i> Source Code</a>
+                                    </div>
+                                </div>
+                                <div class="project-image-side">
+                                    <img src="images/squizz_cover.png" alt="SQuizz Web Front Page" class="project-preview-img">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="strength-card bento-card card-hover">
+                        <div class="card-icon"><i class="fab fa-python"></i></div>
+                        <h3>Data Analytics</h3>
+                        <p>Leveraging Python, Pandas, and SQL to extract, manipulate, and visualize complex datasets efficiently.</p>
+                        <div class="project-details">
+                            <i class="fas fa-times close-btn"></i>
+                            <h4>Featured Project: Automated Web Scraper</h4>
+                            <p>A Python-based data pipeline that scrapes, cleans, and structures real-time data into SQL databases for predictive analysis.</p>
+                            <a href="https://github.com/cx-sahid" target="_blank" class="btn primary-btn mt-1"><i class="fab fa-github"></i> View Repository</a>
+                        </div>
+                    </div>
+                    <div class="strength-card bento-card card-hover">
+                        <div class="card-icon"><i class="fas fa-code"></i></div>
+                        <h3>C++ & Algorithms</h3>
+                        <p>Strong foundation in Data Structures and Algorithms (DSA) using C++ to solve complex computational problems.</p>
+                        <div class="project-details">
+                            <i class="fas fa-times close-btn"></i>
+                            <h4>Featured Project: Performance Algorithm</h4>
+                            <p>An optimized C++ algorithmic project focusing on ultra-low latency execution and efficient memory management using advanced data structures.</p>
+                            <a href="https://github.com/cx-sahid" target="_blank" class="btn primary-btn mt-1"><i class="fab fa-github"></i> View Repository</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Stats Box -->
+        <section id="stats" class="section reveal-element">
+            <div class="container">
+                <h2 class="section-title"><span class="highlight">Impact Metrics</span></h2>
+                <div class="stats-grid-extended bento-card">
+                    <div class="stat-item">
+                        <h3 class="counter" data-target="15">0</h3>
+                        <p>Projects Deployed</p>
+                    </div>
+                    <div class="stat-divider"></div>
+                    <div class="stat-item">
+                        <h3 class="counter" data-target="500">0</h3>
+                        <p>GitHub Commits</p>
+                    </div>
+                    <div class="stat-divider"></div>
+                    <div class="stat-item">
+                        <h3 class="counter" data-target="2">0</h3>
+                        <p>Years Experience</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Realistic Certifications -->
+        <section id="certifications" class="section dark-section reveal-element">
+            <div class="container">
+                <h2 class="section-title"><span class="highlight">Verified Credentials</span></h2>
+                <p style="color: var(--text-muted); margin-bottom: 2rem;">Click on any credential to view the official document.</p>
+                
+                <div class="cert-grid">
+                    
+                    <!-- Realistic Thumbnail for Codec Tech -->
+                    <div class="cert-thumbnail-card card-hover bubble-item" data-cert-type="pdf" data-cert-src="images/codec_cert.pdf">
+                        <div class="cert-preview">
+                            <i class="fas fa-file-pdf pdf-icon"></i>
+                            <div class="preview-overlay"><span>View PDF</span></div>
+                        </div>
+                        <div class="cert-details">
+                            <h4>Codec Technologies</h4>
+                            <p>Web Developer Intern</p>
+                            <span class="cert-date">Completed</span>
+                        </div>
+                    </div>
+
+                    <!-- Realistic Thumbnail for IoT -->
+                    <div class="cert-thumbnail-card card-hover bubble-item" data-cert-type="image" data-cert-src="images/iot_cert.jpg">
+                        <div class="cert-preview img-preview" style="background-image: url('images/iot_cert.jpg');">
+                            <div class="preview-overlay"><span>View Credential</span></div>
+                        </div>
+                        <div class="cert-details">
+                            <h4>IoT Training Program</h4>
+                            <p>upSkill Campus</p>
+                            <span class="cert-date">Completed</span>
+                        </div>
+                    </div>
+
+                    <!-- Placeholder for Hackathon -->
+                    <div class="cert-thumbnail-card card-hover bubble-item" data-cert-type="image" data-cert-src="images/profile.jpg">
+                        <div class="cert-preview">
+                            <i class="fas fa-trophy trophy-icon"></i>
+                            <div class="preview-overlay"><span>View Credential</span></div>
+                        </div>
+                        <div class="cert-details">
+                            <h4>Hackathon Achievement</h4>
+                            <p>Future Events</p>
+                            <span class="cert-date">Pending</span>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Feedback & Contact Form -->
+        <section id="contact" class="section reveal-element">
+            <div class="container">
+                <h2 class="section-title"><span class="highlight">Establish Connection</span></h2>
+                <div class="contact-container bento-card">
+                    <div class="contact-info">
+                        <h3>Initiate Handshake</h3>
+                        <p>Whether you have a question, want to collaborate on a project, or just want to leave some feedback, my inbox is always open.</p>
+                        <div class="contact-details mt-2">
+                            <p><i class="fas fa-envelope highlight"></i> mohammedsahidasrafi@gmail.com</p>
+                            <p><i class="fas fa-phone highlight"></i> +91 8260458494</p>
+                            <p><i class="fas fa-map-marker-alt highlight"></i> Odisha, India</p>
+                        </div>
+                    </div>
+                    
+                    <form class="contact-form" id="contactForm">
+                        <div class="form-group">
+                            <input type="text" id="name" placeholder="Your Name / Alias" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" id="email" placeholder="Your Email address" required>
+                        </div>
+                        <div class="form-group">
+                            <textarea id="message" rows="5" placeholder="Enter your transmission or feedback here..." required></textarea>
+                        </div>
+                        <button type="submit" class="btn primary-btn submit-btn">
+                            <i class="fas fa-paper-plane"></i> Send Transmission
+                        </button>
+                        <p id="form-status" class="form-status"></p>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Full-Width Ribbon Tech Marquee -->
+    <div class="tech-marquee-ribbon">
+        <div class="tech-marquee">
+            <i class="fab fa-html5"></i>
+            <i class="fab fa-css3-alt"></i>
+            <i class="fab fa-js-square"></i>
+            <i class="fab fa-react"></i>
+            <i class="fab fa-python"></i>
+            <i class="fas fa-database"></i>
+            <i class="fab fa-cuttlefish"></i>
+            <i class="fas fa-code"></i>
+            <!-- Duplicate for seamless scrolling -->
+            <i class="fab fa-html5"></i>
+            <i class="fab fa-css3-alt"></i>
+            <i class="fab fa-js-square"></i>
+            <i class="fab fa-react"></i>
+            <i class="fab fa-python"></i>
+            <i class="fas fa-database"></i>
+            <i class="fab fa-cuttlefish"></i>
+            <i class="fas fa-code"></i>
+            <!-- Extra duplication to ensure full width filling -->
+            <i class="fab fa-html5"></i>
+            <i class="fab fa-css3-alt"></i>
+            <i class="fab fa-js-square"></i>
+            <i class="fab fa-react"></i>
+            <i class="fab fa-python"></i>
+            <i class="fas fa-database"></i>
+            <i class="fab fa-cuttlefish"></i>
+            <i class="fas fa-code"></i>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container text-center" style="padding: 2rem 0; border-top: 1px solid rgba(255,255,255,0.05);">
+            <p>Designed & Built by <span class="highlight">Mohammed Sahid Asrafi</span></p>
+        </div>
+    </footer>
+
+    <!-- Certificate Modal -->
+    <div class="certificate-modal" id="certModal">
+        <div class="modal-content">
+            <div class="close-modal" id="closeModal"><i class="fas fa-times"></i></div>
+            <div id="modal-body"></div>
+        </div>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
